@@ -8,19 +8,19 @@
 
         <div class="col-md-8 basic-info">
             <div class="user-wrapper">
-                <h2 class="username">noguerajulioces</h2>
+                <h2 class="username"><%= current_user.username %></h2>
                 <a class="edit-profile" href="<%= edit_user_path(current_user) %>">
                     <button>Edit Profile</button>
                 </a>
             </div>
 
             <ul class="posts">
-                <li><span>12</span> posts </li>
+                <li><span><%= @posts.count %></span> posts </li>
                 <li><span>198</span> followers </li>
                 <li><span>340</span> following </li>
             </ul>
-            <h2 class="name">Julio Noguera</h2>
-            <a class="website">noguerajulioces.com</a>
+            <h2 class="name"><%= current_user.name %></h2>
+            <%= link_to current_user.website, current_user.website, target: '_blank', class: 'website' %>
         </div>
     </div>
 </div>
@@ -45,13 +45,13 @@
 </div>
 
 <div class="user-images">
-    <div class="wrapper">
-        <%= image_tag 'playa'%>
+    <div class="user-images">
+        <% @posts.each do |post| %>
+            <div class="wrapper">
+                <div class="wrapper">
+                    <%= image_tag 'playa2'%>
+                </div>
+            </div>
+        <% end %>
     </div>
-    <div class="wrapper">
-        <%= image_tag 'playa2'%>
-    </div>
-    <div class="wrapper">
-        <%= image_tag 'playa3'%>
-    </div> 
 </div>
