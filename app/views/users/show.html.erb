@@ -1,0 +1,57 @@
+<div class="user-profile">
+    <div class="profile row">
+        <div class="col-md-4 avatar">            
+            <div class="wrapper">
+                <img src="">
+            </div>
+        </div>
+
+        <div class="col-md-8 basic-info">
+            <div class="user-wrapper">
+                <h2 class="username">noguerajulioces</h2>
+                <a class="edit-profile" href="<%= edit_user_path(current_user) %>">
+                    <button>Edit Profile</button>
+                </a>
+            </div>
+
+            <ul class="posts">
+                <li><span>12</span> posts </li>
+                <li><span>198</span> followers </li>
+                <li><span>340</span> following </li>
+            </ul>
+            <h2 class="name">Julio Noguera</h2>
+            <a class="website">noguerajulioces.com</a>
+        </div>
+    </div>
+</div>
+
+<div class="user-tabs">
+    <a class="tab active">
+        <i class="fa fa-th" href=""></i>
+        POST
+    </a>
+    <a class="tab">
+        <i class="fa fa-tv" href=""></i>
+        IGTV
+    </a>
+    <a class="tab">
+        <i class="fa fa-bookmark" href=""></i>
+        SAVED
+    </a>
+    <a class="tab">
+        <i class="fa fa-tag" href=""></i>
+        TAGGED
+    </a>
+</div>
+
+<div class="user-images">
+    <div class="wrapper">
+        <%= image_tag 'playa'%>
+    </div>
+    <div class="wrapper">
+        <%= image_tag 'playa2'%>
+    </div>
+    <div class="wrapper">
+        <%= image_tag 'playa3'%>
+    </div> 
+</div>
